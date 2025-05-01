@@ -3,7 +3,7 @@ This project is a full-stack Python application using **Flask**, **PostgreSQL**,
 
 ---
 
-## 🚀 Features
+## Features
 
 - Flask async backend
 - PostgreSQL for persistent storage
@@ -13,7 +13,7 @@ This project is a full-stack Python application using **Flask**, **PostgreSQL**,
 
 ---
 
-## 🧱 Requirements
+## Requirements
 
 - [Docker](https://www.docker.com/)
 - [Ollama](https://ollama.com/) installed locally and running the `llama3:8b` model
@@ -23,7 +23,7 @@ This project is a full-stack Python application using **Flask**, **PostgreSQL**,
 
 ## 🛠️ Setup Instructions
 
-### 1. 🧠 Start Ollama locally
+### Start Ollama locally
 
 Make sure Ollama is running and listening on port `11434` on your **host machine**.
 
