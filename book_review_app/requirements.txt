@@ -5,3 +5,4 @@ requests==2.32.3
 greenlet==3.2.1
 flask[async]==3.1.0
 httpx==0.28.1
+faker==18.0.0

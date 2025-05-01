@@ -1,7 +1,7 @@
 import httpx
 
 class Llama3Client:
-    def __init__(self, url="http://localhost:11434/api/generate"):
+    def __init__(self, url="http://host.docker.internal:11434/api/generate"):
         self.url = url
         
     async def generate_summary(self, content: str) -> str:
@@ -11,7 +11,7 @@ class Llama3Client:
             "stream": False
         }
         print(content,"////////////")
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.post(self.url, json=payload)
             data = response.json()
             return data["response"]
@@ -30,7 +30,7 @@ class Llama3Client:
             Return only book titles with a short reason for each.
             """
 
-        async with httpx.AsyncClient() as client:
+        async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.post(self.url,
                 json={
                     "model": "llama3.1:8b",

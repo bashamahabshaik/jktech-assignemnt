@@ -40,7 +40,7 @@ async def get_book_summary(book_id):
             'author': book.author,
             'genre': book.genre,
             'summary': summary,
-            'average_rating': average_rating
+            'average_rating': round(average_rating)
         }
     })
     

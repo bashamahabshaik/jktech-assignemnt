@@ -1,5 +1,7 @@
 from flask import Flask
 from app.config import Config
+from app.init_db import init_db
+import asyncio
 # from app.db import db
 def create_app():
     app = Flask(__name__)
@@ -10,5 +12,7 @@ def create_app():
     app.register_blueprint(book_routes.bp)
     app.register_blueprint(review_routes.bp)
     app.register_blueprint(summary_routes.bp)
+    
+    asyncio.run(init_db())
 
     return app
